@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from drupalcampcolorado.org/sessions/grammycom-scaling-drupal-varnish-and-content-delivery-networks by HTTrack Website Copier/3.x [XR&CO'2006], Mon, 02 Aug 2010 19:24:44 GMT -->
+<!-- Added by HTTrack -->
+<!-- Mirrored from colorado2010.drupalcamp.org/drupalcampcolorado.org/sessions/grammycom-scaling-drupal-varnish-and-content-delivery-networks.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2017 05:19:05 GMT -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Grammy.com: Scaling Drupal with Varnish and Content Delivery Networks | DrupalCamp Colorado</title>
+	
+<link rel="shortcut icon" href="../misc/favicon.ico" type="image/x-icon" />
+	<link type="text/css" rel="stylesheet" media="all" href="../sites/default/files/css/css_2aeec32cb059459a763a0fa8b4fabd88.css" />
+<link type="text/css" rel="stylesheet" media="print" href="../sites/default/files/css/css_195ce478033513a0a7626fb7274bc6d7.css" />
+	<script type="text/javascript" src="../sites/default/files/js/js_1561b4351a303981db91dcf8f1e577d3.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|avi|csv|doc|exe|flv|gif|gz|jpe?g|js|mp(3|4|e?g)|mov|pdf|phps|png|ppt|rar|sit|tar|torrent|txt|wma|wmv|xls|xml|zip" } });
+//--><!]]>
+</script>
+</head>
+
+<body class="not-front not-logged-in page-node node-type-session one-sidebar sidebar-right">
+<div id="wrapper">
+  <div id="wrapper-inner">
+    <div id="container" class="clearfix">
+      <div id="header">
+        <h1 id="logo">
+          <a href="../index.html">DrupalCamp Colorado</a>
+        </h1>
+        <div id="twitter">
+          <a href="http://twitter.com/drupalcolorado">Follow</a>
+        </div>
+        <div id="balloon-boy">
+          <a href="../index.html">June 26-27, 2010</a>
+        </div>
+        <ul class="links secondary-links"><li class="forum first"><a href="../forums/drupalcamp-colorado-forum.html" title="" class="forum first"><span>Forum</span></a></li>
+<li class="faq"><a href="../faq.html" class="faq"><span>FAQ</span></a></li>
+<li class="news last"><a href="../news.html" title="" class="news last"><span>News</span></a></li>
+</ul>                        <div id="global-login">
+          <p>
+                  <a href="../user/login.html" class="login">Login</a> or <a href="../user/register.html" class="register">Create an Account</a> to participate.
+                  </p>
+        </div>
+        <ul class="links primary-links"><li class="about first"><a href="../about.html" title="What is DrupalCamp Colorado?" class="about first"><span>About</span></a></li>
+<li class="schedule"><a href="../schedule.html" title="Session schedule" class="schedule"><span>Schedule</span></a></li>
+<li class="attendees"><a href="../attendees.html" title="Event attendees" class="attendees"><span>Attendees</span></a></li>
+<li class="news"><a href="../news.html" title="Updates and news about the event" class="news"><span>News</span></a></li>
+<li class="travel"><a href="../travel.html" title="Travel" class="travel"><span>Travel</span></a></li>
+<li class="sponsors last"><a href="../sponsors.html" class="sponsors last"><span>Sponsors</span></a></li>
+</ul>      </div>
+      <div id="main">
+                <div id="breadcrumb">
+          <ul class="breadcrumb"><li class="first"><a href="../index.html">Home</a></li>
+<li class="last">Grammy.com: Scaling Drupal with Varnish and Content Delivery Networks</li>
+</ul>        </div>
+                        <div id="content">
+                      <div id="content-inner">
+                                                <h1 class="page-title">Grammy.com: Scaling Drupal with Varnish and Content Delivery Networks</h1> 
+                          <div id="node-137" class="node">
+
+  
+    
+    <div class="user-data">
+            <div class="user-picture">
+        <img src="../sites/default/files/imagecache/avatar_small/pictures/picture-102.jpg" alt="" title=""  class="imagecache imagecache-avatar_small" width="30" height="30" />      </div>
+                    <span class="submitted">Posted by <a href="../users/quicksketch.html" title="View user profile.">quicksketch</a> on May 25th, 2010</span>
+          </div>
+
+    <div class="content clear-block">
+      <p>A typical site with some 50 contributed modules might only handle a dozen requests a second, but with proper configuration and server-side software, Drupal can scale to hundreds or thousands of requests a second.</p>
+
+<p>This session will be breaking down the performance strategy used to power <a href="http://www.grammy.com/">the Grammy Awards</a> website, which endured a mind-blowing 230 million hits over 6 hours, with 15,000 new registered users over the same time period.</p>
+
+<p>Technologies covered in this session:</p>
+
+<ul>
+<li>Drupal's built-in caching mechanisms</li>
+<li>PressFlow and Master/Slave databases</li>
+<li>Akamai and Content Delivery Networks</li>
+<li>Load balancing and reverse proxies</li>
+<li>Varnish</li>
+<li>Memcache</li>
+</ul>
+<div class="field field-type-text field-day">
+      <h6>Day:</h6>
+                <div class="field-item odd">
+                     Sunday, 6/27        </div>
+        </div>
+<div class="field field-type-text field-slot">
+      <h6>Time Slot:</h6>
+                <div class="field-item odd">
+                    4:45pm - 5:45pm        </div>
+        </div>
+<div class="field field-type-text field-room">
+      <h6>Room:</h6>
+                <div class="field-item odd">
+                    NC #1539 Aten Design Group        </div>
+        </div>
+<div class="field field-type-text field-skill-level">
+      <h6>Skill Level:</h6>
+      <div class="field-items">
+              <div class="field-item odd">
+                    Intermediate        </div>
+              <div class="field-item even">
+                    Advanced        </div>
+            
+  </div>
+  </div>
+<div class="field field-type-text field-track">
+      <h6>Track:</h6>
+                <div class="field-item odd">
+                    Community        </div>
+        </div>
+<div class="field field-type-filefield field-slides">
+      <h6>Slides:</h6>
+                <div class="field-item odd">
+                    <div class="filefield-file zip"><a href="../sites/default/files/Grammy-slides-and-configuration.zip" class="zip">Grammy-slides-and-configuration.zip</a></div>        </div>
+        </div>
+    </div>
+
+    <div class="clear-block">
+      <div class="meta">
+            </div>
+
+              <div class="links"><ul class="links inline"><li class="a-href-user-login-destination-node-2f137-23comment-form-login-a-to-post-comments first last"><span class="a-href-user-login-destination-node-2f137-23comment-form-login-a-to-post-comments first last"><a href="../user/login64cc64cc.html?destination=node%2F137%23comment-form">Login</a> to post comments</span></li>
+</ul></div>
+          </div>
+
+  </div>
+                      </div>
+                  </div>
+                  <div id="sidebar">
+            <div class="block block-views" id="block-views-news-block_2">
+    <h2>Recent News</h2>
+    <div class="content"><div class="view view-news news-multi-news-item-block view-dom-id-1">
+        <div class="header">
+      <p><a href="http://twitter.com/drupalcolorado">For up to the minute information, follow the twitter account: <strong>@drupalcolorado</strong>.</a></p>
+    </div>
+  
+  
+  
+          <ul class="views-items news">
+          <li class="views-item row-1 odd first">  
+  <div class="nothing-1">
+                <h4><a href="../news/interview-civicactions.html">Interview with CivicActions</a></h4>  </div>
+  
+  <div class="nothing">
+                <span class='submitted'>Posted by <a href="../users/juaneclark.html" title="View user profile.">juaneclark</a> on June 29th, 2010</span>  </div>
+</li>
+          <li class="views-item row-2 even">  
+  <div class="nothing-1">
+                <h4><a href="../news/interview-growing-venture-solutions.html">Interview with Growing Venture Solutions</a></h4>  </div>
+  
+  <div class="nothing">
+                <span class='submitted'>Posted by <a href="../users/juaneclark.html" title="View user profile.">juaneclark</a> on June 26th, 2010</span>  </div>
+</li>
+          <li class="views-item row-3 odd last">  
+  <div class="nothing-1">
+                <h4><a href="../news/interview-commerce-guys.html">Interview with Commerce Guys</a></h4>  </div>
+  
+  <div class="nothing">
+                <span class='submitted'>Posted by <a href="../users/juaneclark.html" title="View user profile.">juaneclark</a> on June 25th, 2010</span>  </div>
+</li>
+      </ul>
+  
+  
+  
+  
+      <div class="view-footer">
+      <ul class="item-list"><li class="first last"><a href="../news.html" class="more"><span>All News</span></a></li>
+</ul>    </div>
+  
+  </div>
+</div>
+</div><div class="block block-views" id="block-views-sponsors-block_4">
+    <div class="content"><div class="view view-sponsors sponsors-home-page-platinum-featured view-dom-id-2">
+        <div class="header">
+      <h5>Platinum</h5>
+    </div>
+  
+  
+  
+          <ul class="views-items sponsors">
+          <li class="views-item row-1 odd first last">  
+  <div class="field-logo-fid">
+                <a href="../sponsors/volacci.html" class="imagecache imagecache-sponsor_logo_callout imagecache-linked imagecache-sponsor_logo_callout_linked"><img src="../sites/default/files/imagecache/sponsor_logo_callout/volcacci.png" alt="" title=""  class="imagecache imagecache-sponsor_logo_callout" width="255" height="130" /></a>  </div>
+  
+  <div class="title">
+                <a href="../sponsors/volacci.html">Volacci</a>  </div>
+</li>
+      </ul>
+  
+  
+  
+  
+      <div class="view-footer">
+      <ul class="item-list"><li class="first"><a href="../become-a-sponsor.html" class="read-more"><span>Become A Sponsor</span></a></li>
+<li class="last"><a href="../sponsors.html" class="more"><span>Sponsors</span></a></li>
+</ul>    </div>
+  
+  </div>
+</div>
+</div><div class="block block-views" id="block-views-attendees-block_1">
+    <h2>Attendees</h2>
+    <div class="content"><div class="view view-attendees attendees-block view-dom-id-3">
+    
+  
+  
+        <table class="views-view-grid">
+  <tbody>
+                <tr class="row-1 row-first">
+                  <td class="col-1">
+              
+  <div class="name">
+                <div class="user-name"><a href="../users/jefe214.html" title="View user profile.">jefe214</a></div>  </div>
+  
+  <div class="picture">
+                <div class="picture">
+  <a href="../users/jefe214.html" title="View user profile."><img src="../sites/default/files/imagecache/avatar_thumb/pictures/picture-99.jpg" alt="jefe214&#039;s picture" title="View user profile."  class="imagecache imagecache-avatar_thumb" width="60" height="60" /></a></div>  </div>
+          </td>
+                  <td class="col-2">
+              
+  <div class="name">
+                <div class="user-name"><a href="../users/c4dna.html" title="View user profile.">c4dna</a></div>  </div>
+  
+  <div class="picture">
+                <div class="picture">
+  <a href="../users/c4dna.html" title="View user profile."><img src="../sites/default/files/imagecache/avatar_thumb/pictures/picture-98.jpg" alt="c4dna&#039;s picture" title="View user profile."  class="imagecache imagecache-avatar_thumb" width="60" height="60" /></a></div>  </div>
+          </td>
+                  <td class="col-3">
+              
+  <div class="name">
+                <div class="user-name"><a href="../users/jenniferism.html" title="View user profile.">jenniferism</a></div>  </div>
+  
+  <div class="picture">
+                <div class="picture">
+  <a href="../users/jenniferism.html" title="View user profile."><img src="../sites/default/files/imagecache/avatar_thumb/pictures/picture-97.jpg" alt="jenniferism&#039;s picture" title="View user profile."  class="imagecache imagecache-avatar_thumb" width="60" height="60" /></a></div>  </div>
+          </td>
+                  <td class="col-4">
+              
+  <div class="name">
+                <div class="user-name"><a href="../users/cspence.html" title="View user profile.">cspence</a></div>  </div>
+  
+  <div class="picture">
+                <div class="picture">
+  <a href="../users/cspence.html" title="View user profile."><img src="../sites/default/files/imagecache/avatar_thumb/pictures/picture-96.jpg" alt="cspence&#039;s picture" title="View user profile."  class="imagecache imagecache-avatar_thumb" width="60" height="60" /></a></div>  </div>
+          </td>
+              </tr>
+                <tr class="row-2">
+                  <td class="col-1">
+              
+  <div class="name">
+                <div class="user-name"><a href="../users/mrookie.html" title="View user profile.">m_rookie</a></div>  </div>
+  
+  <div class="picture">
+                <div class="picture">
+  <a href="../users/mrookie.html" title="View user profile."><img src="../sites/default/files/imagecache/avatar_thumb/pictures/picture-95.jpg" alt="m_rookie&#039;s picture" title="View user profile."  class="imagecache imagecache-avatar_thumb" width="60" height="60" /></a></div>  </div>
+          </td>
+                  <td class="col-2">
+              
+  <div class="name">
+                <div class="user-name"><a href="../users/andy.html" title="View user profile.">andy</a></div>  </div>
+  
+  <div class="picture">
+                <div class="picture">
+  <a href="../users/andy.html" title="View user profile."><img src="../sites/default/files/imagecache/avatar_thumb/pictures/picture-90.jpg" alt="andy&#039;s picture" title="View user profile."  class="imagecache imagecache-avatar_thumb" width="60" height="60" /></a></div>  </div>
+          </td>
+                  <td class="col-3">
+              
+  <div class="name">
+                <div class="user-name"><a href="../users/mpotter.html" title="View user profile.">mpotter</a></div>  </div>
+  
+  <div class="picture">
+                <div class="picture">
+  <a href="../users/mpotter.html" title="View user profile."><img src="../sites/default/files/imagecache/avatar_thumb/pictures/picture-87.jpg" alt="mpotter&#039;s picture" title="View user profile."  class="imagecache imagecache-avatar_thumb" width="60" height="60" /></a></div>  </div>
+          </td>
+                  <td class="col-4">
+              
+  <div class="name">
+                <div class="user-name"><a href="../users/pixel-whip.html" title="View user profile.">Pixel-Whip</a></div>  </div>
+  
+  <div class="picture">
+                <div class="picture">
+  <a href="../users/pixel-whip.html" title="View user profile."><img src="../sites/default/files/imagecache/avatar_thumb/pictures/picture-86.jpg" alt="Pixel-Whip&#039;s picture" title="View user profile."  class="imagecache imagecache-avatar_thumb" width="60" height="60" /></a></div>  </div>
+          </td>
+              </tr>
+                <tr class="row-3 row-last">
+                  <td class="col-1">
+              
+  <div class="name">
+                <div class="user-name"><a href="../users/rszrama.html" title="View user profile.">rszrama</a></div>  </div>
+  
+  <div class="picture">
+                <div class="picture">
+  <a href="../users/rszrama.html" title="View user profile."><img src="../sites/default/files/imagecache/avatar_thumb/pictures/picture-83.jpg" alt="rszrama&#039;s picture" title="View user profile."  class="imagecache imagecache-avatar_thumb" width="60" height="60" /></a></div>  </div>
+          </td>
+                  <td class="col-2">
+              
+  <div class="name">
+                <div class="user-name"><a href="../users/okojumu.html" title="View user profile.">okojumu</a></div>  </div>
+  
+  <div class="picture">
+                <div class="picture">
+  <a href="../users/okojumu.html" title="View user profile."><img src="../sites/default/files/imagecache/avatar_thumb/pictures/picture-82.jpg" alt="okojumu&#039;s picture" title="View user profile."  class="imagecache imagecache-avatar_thumb" width="60" height="60" /></a></div>  </div>
+          </td>
+                  <td class="col-3">
+              
+  <div class="name">
+                <div class="user-name"><a href="../users/c4rl.html" title="View user profile.">c4rl</a></div>  </div>
+  
+  <div class="picture">
+                <div class="picture">
+  <a href="../users/c4rl.html" title="View user profile."><img src="../sites/default/files/imagecache/avatar_thumb/pictures/picture-81.jpg" alt="c4rl&#039;s picture" title="View user profile."  class="imagecache imagecache-avatar_thumb" width="60" height="60" /></a></div>  </div>
+          </td>
+                  <td class="col-4">
+              
+  <div class="name">
+                <div class="user-name"><a href="../users/ezra.html" title="View user profile.">ezra</a></div>  </div>
+  
+  <div class="picture">
+                <div class="picture">
+  <a href="../users/ezra.html" title="View user profile."><img src="../sites/default/files/imagecache/avatar_thumb/pictures/picture-8.jpg" alt="ezra&#039;s picture" title="View user profile."  class="imagecache imagecache-avatar_thumb" width="60" height="60" /></a></div>  </div>
+          </td>
+              </tr>
+      </tbody>
+</table>
+  
+  
+  
+  
+      <div class="view-footer">
+      <ul class="item-list"><li class="first last"><a href="../attendees.html" class="more"><span>All Attendees</span></a></li>
+</ul>    </div>
+  
+  </div>
+</div>
+</div>          </div>
+              </div>
+      <div id="footer">
+                  <div id="footer-content">
+            <div class="block block-views" id="block-views-sponsors-block_5">
+    <div class="content"><div class="view view-sponsors sponsors-home-page-gold-featured view-dom-id-4">
+        <div class="header">
+      <h5>Gold</h5>
+    </div>
+  
+  
+  
+          <ul class="views-items sponsors">
+          <li class="views-item row-1 odd first last">  
+  <div class="field-logo-fid">
+                <a href="../sponsors/monarch-digital.html" class="imagecache imagecache-sponsor_logo_callout imagecache-linked imagecache-sponsor_logo_callout_linked"><img src="../sites/default/files/imagecache/sponsor_logo_callout/monarch_digital.png" alt="" title=""  class="imagecache imagecache-sponsor_logo_callout" width="255" height="130" /></a>  </div>
+  
+  <div class="title">
+                <a href="../sponsors/monarch-digital.html">Monarch Digital</a>  </div>
+</li>
+      </ul>
+  
+  
+  
+  
+  
+  </div>
+</div>
+</div><div class="block block-views" id="block-views-sponsors-block_6">
+    <div class="content"><div class="view view-sponsors sponsors-home-page-silver-featured view-dom-id-5">
+        <div class="header">
+      <h5>Silver</h5>
+    </div>
+  
+  
+  
+          <ul class="views-items sponsors">
+          <li class="views-item row-1 odd first last">  
+  <div class="field-logo-fid">
+                <a href="../sponsors/bwbacon-group.html" class="imagecache imagecache-sponsor_logo_callout imagecache-linked imagecache-sponsor_logo_callout_linked"><img src="../sites/default/files/imagecache/sponsor_logo_callout/bwbacon3.png" alt="" title=""  class="imagecache imagecache-sponsor_logo_callout" width="255" height="130" /></a>  </div>
+  
+  <div class="title">
+                <a href="../sponsors/bwbacon-group.html">BWBacon Group</a>  </div>
+</li>
+      </ul>
+  
+  
+  
+  
+  
+  </div>
+</div>
+</div><div class="block block-views" id="block-views-sponsors-block_7">
+    <div class="content"><div class="view view-sponsors sponsors-home-page-bronze-featured view-dom-id-6">
+        <div class="header">
+      <h5>Bronze</h5>
+    </div>
+  
+  
+  
+          <ul class="views-items sponsors">
+          <li class="views-item row-1 odd first last">  
+  <div class="field-logo-fid">
+                <a href="../sponsors/5-rings-web-design.html" class="imagecache imagecache-sponsor_logo_callout imagecache-linked imagecache-sponsor_logo_callout_linked"><img src="../sites/default/files/imagecache/sponsor_logo_callout/logo_v2h.png" alt="" title=""  class="imagecache imagecache-sponsor_logo_callout" width="255" height="130" /></a>  </div>
+  
+  <div class="title">
+                <a href="../sponsors/5-rings-web-design.html">5 Rings Web Design</a>  </div>
+</li>
+      </ul>
+  
+  
+  
+  
+  
+  </div>
+</div>
+</div>          </div>
+                <div id="footer-links">
+          <div id="volunteer-link">Thanks to our <a href="../volunteers.html">volunteers</a></div>
+          <ul class="links primary-links"><li class="about first"><a href="../about.html" title="What is DrupalCamp Colorado?" class="about first"><span>About</span></a></li>
+<li class="schedule"><a href="../schedule.html" title="Session schedule" class="schedule"><span>Schedule</span></a></li>
+<li class="attendees"><a href="../attendees.html" title="Event attendees" class="attendees"><span>Attendees</span></a></li>
+<li class="news"><a href="../news.html" title="Updates and news about the event" class="news"><span>News</span></a></li>
+<li class="travel"><a href="../travel.html" title="Travel" class="travel"><span>Travel</span></a></li>
+<li class="sponsors last"><a href="../sponsors.html" class="sponsors last"><span>Sponsors</span></a></li>
+</ul>          <ul class="links secondary-links"><li class="forum first"><a href="../forums/drupalcamp-colorado-forum.html" title="" class="forum first"><span>Forum</span></a></li>
+<li class="faq"><a href="../faq.html" class="faq"><span>FAQ</span></a></li>
+<li class="news last"><a href="../news.html" title="" class="news last"><span>News</span></a></li>
+</ul>        </div>
+      </div>
+      <div id="box-boy">
+        <a href="http://en.wikipedia.org/wiki/Balloon_boy_hoax">Balloon Boy</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../sites/default/files/js/js_0cd4aed3ca1203805e207d2466d914ee.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+try{var pageTracker = _gat._getTracker("UA-9027944-1");pageTracker._trackPageview();} catch(err) {}
+//--><!]]>
+</script>
+</body>
+
+<!-- Mirrored from drupalcampcolorado.org/sessions/grammycom-scaling-drupal-varnish-and-content-delivery-networks by HTTrack Website Copier/3.x [XR&CO'2006], Mon, 02 Aug 2010 19:24:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+<!-- Mirrored from colorado2010.drupalcamp.org/drupalcampcolorado.org/sessions/grammycom-scaling-drupal-varnish-and-content-delivery-networks.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2017 05:23:49 GMT -->
+</html>

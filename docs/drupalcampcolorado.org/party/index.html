@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Mirrored from drupalcampcolorado.org/party/ by HTTrack Website Copier/3.x [XR&CO'2006], Mon, 02 Aug 2010 19:23:19 GMT -->
+
+<!-- Mirrored from colorado2010.drupalcamp.org/drupalcampcolorado.org/party/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2017 05:12:28 GMT -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>DrupalCamp Colorado Party</title>
+	
+	<style type="text/css" media="screen">
+	 
+	 #the-real-body {
+	   background-image: url(bg1.png);
+	   background-repeat: no-repeat;
+	   background-position: center top;
+	   padding-top: 200px;
+	 }
+	 
+	 #inner {
+	   width: 960px;
+	   margin: 0 auto;
+	 }
+	 
+	 a {
+	   color: #9f9;
+	   text-decoration: none;
+	 }
+	 
+	 a:hover {
+	   text-decoration: underline;
+	 }
+	 
+	 h1 a {
+	   color: inherit;
+	 }
+	 
+	 a img {
+	   border: 0;
+	 }
+	 
+	 body {
+	   color: #fff;
+	   margin: 0;
+	   padding: 0;
+	   background-image: url(wallpaper.png); /* http://www.flickr.com/photos/sindesign/298786928/ */
+	   background-position: center top;
+	   text-align: center;
+	   font-size: 2em;
+	 }
+	 
+	 table {
+	   width: 100%;
+	 }
+	 
+	 #bb {
+	   margin: 200px 0;
+	 }
+	 
+	 td {
+	   vertical-align: top;
+	 }
+	 
+	 #hidden-video {
+	   height: 1px;
+	   width: 1px;
+	   overflow: hidden;
+	 }
+	 
+	 #hidden-video div {
+	   margin: 10px;
+	 }
+	 
+	</style>
+
+  <script src="../../code.jquery.com/jquery-1.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript" charset="utf-8">
+	//<![CDATA[
+   
+    $(document).ready(function(){
+      
+      // Gimme some of those cats!
+      $('#more-cats').bind('click', function(){
+        $.get(
+          'indexecf4ecf4.html?player=1', 
+          function(data) {
+            $('#playa-please').html(data);
+            $('a#stop:hidden').show();
+          }
+        );
+        return false;
+      });
+
+
+      // Cut that snizz off!
+      $stop = $('<p><a id="stop" href="#">Stop the music<blink>!</blink></a></p>');
+      $stop.find('a').bind('click', function() {
+        $('#hidden-video').remove();
+        $(this).hide();
+        return false;
+      });
+      $('#playa-please').after($stop);
+      
+    });
+  //]]>
+	</script>
+	
+</head>
+
+<body>
+
+  <div id="the-real-body"><div id="inner">
+
+  <h1><a href="../index.html">DrupalCamp Colorado</a> Party!</h1>
+
+  <p>Join us Saturday night 7:00PM at <a href="http://www.brooklynsrestaurants.com/" title="Brooklyn's at the Pepsi Center">Brooklyn's</a> for complimentary drinks, book giveaway, and hot tunes.</p>
+
+  <p>Brooklyn's is just across the street from the Auraria Campus.</p>
+
+	<table cellspacing="0" cellpadding="0"><tr><td>
+  	<p>Check out the map</p>
+  	<iframe width="400" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=110937250986537262874.00048551729d89882ed91&amp;source=embed&amp;ll=39.745936,-105.001745&amp;spn=0.019798,0.025749&amp;iwloc=00048993a2fd94945974a&amp;output=embed"></iframe>
+  	<p><a href="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=110937250986537262874.00048551729d89882ed91&amp;ll=39.745936,-105.001745&amp;spn=0.019798,0.025749&amp;z=14&amp;source=embed">View larger map</a></p>
+	</td>
+	<td>
+  	<p><a id="more-cats" href="index.html" title="You can't resist!">Click here</a> for a random dancing cat</p>
+    <div id="playa-please">
+      <img src="Hardcoresteve.gif" alt="I totally stole this from http://www.netanimations.net/cats.htm" title="I totally stole this from http://www.netanimations.net/cats.htm" /><div id="hidden-video"><div><object width="480" height="385"><param name="movie" value="http://www.youtube.com/v/1ssm_MLoj74&hl=en_US&fs=1&autoplay=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/1ssm_MLoj74&amp;hl=en_US&amp;fs=1&amp;autoplay=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object></div></div>    </div>
+  </td></tr></table>
+
+  <a href="../index.html" title="He has a name, you know. It's Falcon."><img id="bb" src="bb.png" alt="He has a name, you know. It's Falcon." /></a>
+  
+  </div></div>
+  <script type="text/javascript">
+  <!--//--><![CDATA[//><!--
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  //--><!]]>
+  </script>
+  <script type="text/javascript">
+  <!--//--><![CDATA[//><!--
+  try{var pageTracker = _gat._getTracker("UA-9027944-1");pageTracker._trackPageview();} catch(err) {}
+  //--><!]]>
+
+  </script>
+
+</body>
+
+<!-- Mirrored from drupalcampcolorado.org/party/ by HTTrack Website Copier/3.x [XR&CO'2006], Mon, 02 Aug 2010 19:23:19 GMT -->
+
+<!-- Mirrored from colorado2010.drupalcamp.org/drupalcampcolorado.org/party/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Jun 2017 05:12:43 GMT -->
+</html>
